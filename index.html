@@ -23,8 +23,22 @@
 
         </script>
     </head>
-    <body onload="onBodyLoad()">
+    <body onload="onBodyLoad('')">
+    
+     <script type="text/javascript">
+
+        function onBodyLoad()
+        {  
+    $.ajax({
+	url: 'http://192.168.1.5/studia_facile',
+	success: function(data) {
+		//it works, do something with the data
+	},
+	error: function() {
+		//something went wrong, handle the error and display a message
+	}
+}); }
+</script>
     <h1>Hey, it's PhoneGap!</h1>
     </body>
 </html>
-
