@@ -8,24 +8,22 @@
 
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-        <script type="text/javascript">
+     
+        
+        <script>
+function onLoad()
+{
+    $('#content').load('http://192.168.1.5/studia_facile');
 
-        function onBodyLoad()
-        {       
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
-
-        function onDeviceReady()
-        {
-            // do your thing!
-            $('#content').load('http://192.168.1.5/studia_facile');
-        }
-
-        </script>
+}
+</script>
     </head>
 
     
-    <body onload="onBodyLoad('')">
+    <body>
+    <div data-role="content" id="content">
+<input type="button" value="click" onClick="onLoad();">
+</div>
     
     
     <h1>Hey, it's PhoneGap! load ext3</h1>
