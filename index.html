@@ -13,18 +13,23 @@
         <script>
 function onLoad()
 {
-    $('#content').load('http://192.168.1.5/studia_facile');
-
+    
+	$("#home").live('pageshow', function(){  
+    $("#home .content").load('http://192.168.1.5/studia_facile');  
+});
+	
 }
 </script>
     </head>
 
     
 <body>
-    <div data-role="content" id="content">
-<input type="button" value="click" onClick="onLoad();">
+    <div data-role="home" id="home">
+
+
 </div>
-    
+
+   
     
     <h1>Hey, it's PhoneGap! load ext4</h1>
 </body>
