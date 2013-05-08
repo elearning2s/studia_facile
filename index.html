@@ -9,28 +9,19 @@
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
      
-        
-        <script>
-function onLoad()
-{
-    
-	$("#home").live('pageshow', function(){  
-    $("#home .content").load('http://192.168.1.5/studia_facile');  
+       <script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $('#div1').load('http://192.168.1.5/studia_facile');
+  });
 });
-	
-}
 </script>
-    </head>
-
-    
+</head>
 <body>
-    <div data-role="home" id="home">
 
-
-</div>
-
+<div id="div1"><h2>Click to get information</h2></div>
+<button>Get External Content</button>   
    
-    
     <h1>Hey, it's PhoneGap! load ext4</h1>
 </body>
 </html>
